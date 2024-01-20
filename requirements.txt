@@ -1,0 +1,14 @@
+celery==4.4.2
+fastapi
+matplotlib
+opencv-python
+aiofiles
+python-multipart
+pyyaml
+seaborn
+uvicorn
+redis
+torch
+torchvision
+requests
+loguru

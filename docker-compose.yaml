@@ -1,0 +1,24 @@
+services:
+  redis:
+    container_name: redis
+    image: redis
+    ports:
+      - "6379:6379"
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+
+  backend:
+    container_name: torch_server
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    command: sh -c "cd backend && cd api && uvicorn main:app --host 0.0.0.0 --port 8000 --reload && cd ../ && celery -A celery_tasks.app_worker worker -l INFO --pool=solo"
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
