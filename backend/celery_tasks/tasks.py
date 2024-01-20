@@ -22,7 +22,7 @@ class PredictTask(Task):
         return self.run(*args, **kwargs)
 
 
-@app.task(ignore_result=False, bind=True)
+@app.task(ignore_result=False, bind=True, base = PredictTask)
 def predict_image(self, data):
 
     try:
