@@ -2,6 +2,17 @@
 
 This project shows how to serve a pytorch model using Celery, Redis and RabbitMQ to serve users asynchronously.
 
+
+## Project Overview
+
+PyTorch: A simple resnet50 model with pretrained weights for classification.
+
+Celery: A distributed task queue system in Python, allowing asynchronous processing of tasks, making it suitable for background jobs.
+
+Redis: An in-memory data store often used as a caching mechanism, here employed for storing and retrieving intermediate results in the distributed system to enhance performance.
+
+RabbitMQ: A message broker that facilitates communication between different parts of a distributed application, ensuring efficient and reliable message passing between the API and Celery workers.
+
 ## Installation
 
 1. Build containers
