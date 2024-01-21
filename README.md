@@ -15,7 +15,7 @@ RabbitMQ: A message broker that facilitates communication between different part
 
 ## Installation
 
-1. Build containers
+1. **Build containers**
 
 ```bash
 make serve
