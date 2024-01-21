@@ -21,7 +21,7 @@ RabbitMQ: A message broker that facilitates communication between different part
 make serve
 ```
 
-2. Check application health
+2. ### Check application health
 ```bash
 curl -X 'GET' \
   'http://localhost:8000/health' \
@@ -36,7 +36,7 @@ Response
 
 ```
 
-3. Call the process api
+3. ### Call the process api
 ```bash
 curl -X 'POST' \
   'http://localhost:8000/api/process' \
@@ -57,7 +57,7 @@ Response
 
 ```
 
-4. Check the status in the queue
+4. ### Check the status in the queue
 ```bash
 curl -X 'GET' \
   'http://localhost:8000/api/status/<task_id>' \
@@ -72,7 +72,7 @@ Response
 }
 ```
 
-5. Check the result
+5. ### Check the result
 ```bash
 curl -X 'GET' \
   'http://localhost:8000/api/result/<task_id>' \
@@ -88,7 +88,7 @@ Response
 }
 ```
 
-6. Stop the service
+6. ### Stop the service
 
 ```bash
 make stop
